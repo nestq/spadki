@@ -20,3 +20,11 @@
   "author": "",
   "license": ""
 }
+  "environments": {
+    "test": {
+      "buildpacks": [
+        { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" },
+        { "url": "heroku/nodejs" }
+      ]
+    }
+  }
