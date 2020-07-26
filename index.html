@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+    </head>
+    <body>
+        <h1>BetMonitor</h1>
+
+        <!-- <div id="buttons"> -->
+            <!-- <button type="button" onclick="addCasual('zwykle')">Casual</button> -->
+            <!-- <button type="button" onclick="addMonitored('monitorowane')">Monitored</button> -->
+            <!-- <button type="button" onclick="addTextToField('settings', 'new setting')">Settings</button> -->
+        <!-- </div> -->
+
+        <div id="content">
+            <div id="settings">
+                <p id="settingsTitle">Ustawienia</p>
+                <form id="settingsForm" method="POST">
+                    Procent monitorowanego spadku:<br> <input id="percentage" type="number" name="percent" value="30"></input><br><br>
+                    Próg monitorowania Over/Under:<br>  <input id="threshold_OU" type="number" name="threshold" value=0.59></input><br><br>
+                    Próg monitorowania 1X2:<br>  <input id="threshold_1X2" type="number" name="threshold" value=0.4></input><br><br>
+                    <!-- Próg monitorowania Handicap:<br>  <input id="threshold_handi" type="number" name="threshold" value=0.4></input><br><br> -->
+                    Monitorowanie zmian linii: <input id="line_monitoring" type="checkbox" name="line_monitoring" checked><br><br>
+                    <input id="submit" type="button" value="zapisz" />
+                </form>
+                <br>
+                <!-- <button type="button" onclick="printInfo()">Reset</button> -->
+            </div>
+            
+            <div id="main">
+                <p id="casualFieldTitle">Info: </p>
+                <iframe id="casualFrame" width="800px"></iframe>
+
+                <p id="monitoredFieldTitle">Monitorowane spadki: </p>
+                <iframe id="monitoredFrame" width="800px" height="2000px"></iframe>
+            </div>
+
+            <div id="placeholder"></div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="static/script.js"></script>
+    </body>
+</html>
