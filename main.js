@@ -306,6 +306,14 @@ void (async() => {
                                                     timestamp: Date.now(),
                                                 });
                                             }
+                                            if (newLine < oldLine)
+                                            {
+                                                monitoredMessages.push({
+                                                    text: matchTime + " | " + matchID + " | " + book + " | O/U | <b>zmiana linii:</b> " + 
+                                                    dict[matchID][book]["currentLine"] + " -> " + lineValue,
+                                                    timestamp: Date.now(),
+                                                });
+                                            }
                                             else {
                                                 casualMessages.push({
                                                     text: matchTime + " | " + matchID + " | " + book + " | O/U | <b>zmiana linii:</b> " + 
