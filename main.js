@@ -41,11 +41,11 @@ app.use(bodyParser.json());
 
 // GETTING PARAMETERS
 
-percentage = 30;
-threshold_OU = 0.4;
-threshold_1X2 = 0.4;
-threshold_handi = 0.4;
-line_monitoring = false;
+percentage = 20;
+threshold_OU = 0.59;
+threshold_1X2 = 0.59;
+threshold_handi = 0.59;
+line_monitoring = true;
 
 app.post('/', function(req, res) {
     console.log(req.body);
